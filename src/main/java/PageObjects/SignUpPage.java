@@ -44,7 +44,7 @@ public class SignUpPage
         DriverCommon.TypeText(email,"ameyabhagwat109@gmail.com");
         DriverCommon.TypeText(password,"Suppu34$");
         DriverCommon.click(SignUpButton);
-        DriverCommon.ThreadSleep(7);
+        DriverCommon.ThreadSleep(6);
 
     }
 
