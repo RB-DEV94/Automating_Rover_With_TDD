@@ -9,12 +9,24 @@
         <classes>
             <class name="TestCases.SignIn"/>
 
-            <class name="TestCases.SignUp"/>
+
+
 
 
         </classes>
     </test> <!-- Test -->
+    <test name="Sign UP">
+        <classes>
 
+            <class name="TestCases.SignUp"/>
+
+
+
+
+
+        </classes>
+    </test>
 
 
 </suite> <!-- Suite -->
+
