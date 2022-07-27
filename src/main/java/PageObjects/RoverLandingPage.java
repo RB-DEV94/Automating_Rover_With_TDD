@@ -18,9 +18,21 @@ public class RoverLandingPage
     @FindBy(xpath="//a[contains(text(),'Sign Up')]")
     public static WebElement SignUpLink;
 
+    @FindBy(xpath="//a[contains(text(),'Sign In')]")
+    public static WebElement SingInLink;
+
+
+    public WebElement getSingInLink()
+    {
+        return SingInLink;
+    }
     public static void ClickSignUp()
     {
         DriverCommon.click(SignUpLink);
+    }
+    public static void ClickSignIn()
+    {
+        DriverCommon.click(SingInLink);
     }
 
 }
