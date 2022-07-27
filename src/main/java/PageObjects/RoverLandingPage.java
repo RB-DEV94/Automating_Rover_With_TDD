@@ -22,10 +22,7 @@ public class RoverLandingPage
     public static WebElement SingInLink;
 
 
-    public WebElement getSingInLink()
-    {
-        return SingInLink;
-    }
+    public static WebElement getSingInLink(){return SingInLink;}
     public static void ClickSignUp()
     {
         DriverCommon.click(SignUpLink);

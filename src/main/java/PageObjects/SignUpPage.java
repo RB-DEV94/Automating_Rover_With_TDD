@@ -2,6 +2,7 @@ package PageObjects;
 
 import Base.BaseDriver;
 import Utilities.DriverCommon;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -17,6 +18,10 @@ public class SignUpPage
 
     @FindBy(name = "first_name")
     public static WebElement Firstname;
+
+
+
+
 
     @FindBy(name = "last_name")
     public static WebElement Lastname;
@@ -36,15 +41,20 @@ public class SignUpPage
 
 
 
-    public static void doSignUp() throws InterruptedException {
+
+    public static void doSignUp(String firstname) throws InterruptedException {
+
+
+        //SignUpPage su=new SignUpPage();
         DriverCommon.clickOnlyIfElementPresent(SignUpWithLinkk);
-        DriverCommon.TypeText(Firstname,"Anna");
+        DriverCommon.ThreadSleep(6);
+        DriverCommon.TypeText(Firstname,firstname);
         DriverCommon.TypeText(Lastname,"Bhate");
         DriverCommon.TypeText(zipcode,"60612");
-        DriverCommon.TypeText(email,"ameyabhagwat109@gmail.com");
+        DriverCommon.TypeText(email,"ameyxxadcdcahulr09@gmail.com");
         DriverCommon.TypeText(password,"Suppu34$");
-        DriverCommon.click(SignUpButton);
-        DriverCommon.ThreadSleep(6);
+        //DriverCommon.click(SignUpButton);
+        //DriverCommon.ThreadSleep(6);
 
     }
 

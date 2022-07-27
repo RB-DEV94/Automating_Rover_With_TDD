@@ -54,6 +54,8 @@ public class DriverCommon extends BaseDriver {
         return flag;
     }
 
+
+
     public static String getTitle(){
         return BaseDriver.driver.getTitle();
     }

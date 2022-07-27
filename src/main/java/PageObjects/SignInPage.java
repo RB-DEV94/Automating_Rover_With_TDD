@@ -24,14 +24,15 @@ public class SignInPage {
     public static WebElement SignInButton;
 
 
+
     public static void doSignIn() throws InterruptedException {
-        RoverLandingPage rp=new RoverLandingPage();
+       RoverLandingPage rp=new RoverLandingPage();
         WebElement signinlink=rp.getSingInLink();
         DriverCommon.click(signinlink);
         DriverCommon.TypeText(Username,"bhagwat.rahul557@gmail.com");
         DriverCommon.TypeText(password,"Suppu34$");
-        DriverCommon.clickOnlyIfElementPresent(SignInButton);
-        DriverCommon.ThreadSleep(6);
+       // DriverCommon.clickOnlyIfElementPresent(SignInButton);
+       // DriverCommon.ThreadSleep(6);
 
     }
 }
