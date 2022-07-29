@@ -11,11 +11,12 @@ public class SignIn extends BaseDriver
 {
     @Test
     public void SignInTest() throws InterruptedException {
+
         SignInPage signin = new SignInPage();
         signin.doSignIn();
-        //String matchedString=BaseDriver.driver.findElement(By.cssSelector("#logged-in-user-dropdown-menu")).getAttribute("aria-label");
+        String matchedString=BaseDriver.driver.findElement(By.cssSelector("#logged-in-user-dropdown-menu")).getAttribute("aria-label");
 
-        //Assert.assertTrue(matchedString.contains("Logged in as"));
+        Assert.assertTrue(matchedString.contains("Logged in as"));
 
     }
 

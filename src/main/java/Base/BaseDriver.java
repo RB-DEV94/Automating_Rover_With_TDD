@@ -59,9 +59,10 @@ public class BaseDriver
         ExtentManager.endReport();
     }
 
-    @AfterClass
+    @AfterTest
     public void Cleanup()
     {
+
         driver.quit();
 
 

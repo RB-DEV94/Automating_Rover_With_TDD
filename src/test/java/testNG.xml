@@ -8,25 +8,24 @@
     <test name="Sign In">
         <classes>
             <class name="TestCases.SignIn"/>
-
-
-
-
-
-        </classes>
-    </test> <!-- Test -->
-    <test name="Sign UP">
-        <classes>
-
-            <class name="TestCases.SignUp"/>
-
-
-
-
-
         </classes>
     </test>
-
-
+    <test name="Sign Up">
+        <classes>
+            <class name="TestCases.SignUp"/>
+        </classes>
+    </test>
+    <test name="Tabs Validate">
+        <classes>
+            <class name="TestCases.TabsValidation"/>
+        </classes>
+    </test>
+    <test name="Results Test">
+        <classes>
+            <class name="TestCases.Search"/>
+            <class name="TestCases.FilterByPrice"/>
+            <class name="TestCases.ServiceTypeValidation"/>
+        </classes>
+    </test>
 </suite> <!-- Suite -->
 

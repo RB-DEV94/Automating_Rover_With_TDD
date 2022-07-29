@@ -10,15 +10,10 @@ public class ExtentManager {
     public static ExtentTest test;
 
     public static void setExtent() {
-        //htmlReporter= new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/ExtentReport/"+"MyReport_"+BaseClass.getCurrentTime()+".html");
+
         htmlReporter= new ExtentHtmlReporter("/Users/rahulbhagwat/Downloads/RoverWebAutomation/Reports/extentreport.html");
         htmlReporter.loadXMLConfig("/Users/rahulbhagwat/Downloads/RoverWebAutomation/src/extent-config.xml");
-        //htmlReporter.config().setDocumentTitle("Automation Test Report");
-        //htmlReporter.config().setReportName("OrangeHRM Test Automation Report");
-        //htmlReporter.config().setTheme(Theme.DARK);
-
         extent = new ExtentReports();
-
         extent.attachReporter(htmlReporter);
         extent.setSystemInfo("HostName", "MyHost");
         extent.setSystemInfo("ProjectName", "Rover Website Automation");

@@ -224,6 +224,15 @@ public class DriverCommon extends BaseDriver {
         element.click();
     }
 
+    public static void JSClick(WebElement element) throws InterruptedException {
+
+        JavascriptExecutor ex = (JavascriptExecutor)driver;
+        ex.executeScript("arguments[0].click();", element);
+        ThreadSleep(6);
+
+    }
+
+
     public static void scrollDownVertically() {
         Waits.tryJavascript("window.scrollTo(0, document.body.scrollHeight)");
     }

@@ -20,9 +20,6 @@ public class SignUpPage
     public static WebElement Firstname;
 
 
-
-
-
     @FindBy(name = "last_name")
     public static WebElement Lastname;
 
@@ -51,10 +48,10 @@ public class SignUpPage
         DriverCommon.TypeText(Firstname,firstname);
         DriverCommon.TypeText(Lastname,"Bhate");
         DriverCommon.TypeText(zipcode,"60612");
-        DriverCommon.TypeText(email,"ameyxxadcdcahulr09@gmail.com");
+        DriverCommon.TypeText(email,"ameyxxadcdcahjhxbculr09@gmail.com");
         DriverCommon.TypeText(password,"Suppu34$");
-        //DriverCommon.click(SignUpButton);
-        //DriverCommon.ThreadSleep(6);
+        DriverCommon.click(SignUpButton);
+        DriverCommon.ThreadSleep(6);
 
     }
 

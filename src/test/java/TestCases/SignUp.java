@@ -20,14 +20,11 @@ public class SignUp extends BaseDriver
         SignUpPage su=new SignUpPage();
 
         su.doSignUp(firstname);
-        //String matchedString=BaseDriver.driver.findElement(By.cssSelector("#logged-in-user-dropdown-menu")).getAttribute("aria-label");
+        String matchedString=driver.findElement(By.cssSelector("#logged-in-user-dropdown-menu")).getAttribute("aria-label");
 
-        //System.out.println(matchedString);
-        //System.out.println("Logged in as "+firstname+"");
-        //Assert.assertEquals(matchedString,"Logged in as "+firstname+"");
-
-
-
+        System.out.println(matchedString);
+        System.out.println("Logged in as "+firstname+"");
+        Assert.assertEquals(matchedString,"Logged in as "+firstname+"");
 
     }
 

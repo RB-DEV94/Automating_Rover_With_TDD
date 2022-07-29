@@ -6,7 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SignInPage {
+public class SignInPage
+{
     public SignInPage() {
         PageFactory.initElements(BaseDriver.driver, this);
     }
@@ -31,8 +32,8 @@ public class SignInPage {
         DriverCommon.click(signinlink);
         DriverCommon.TypeText(Username,"bhagwat.rahul557@gmail.com");
         DriverCommon.TypeText(password,"Suppu34$");
-       // DriverCommon.clickOnlyIfElementPresent(SignInButton);
-       // DriverCommon.ThreadSleep(6);
+       DriverCommon.clickOnlyIfElementPresent(SignInButton);
+       DriverCommon.ThreadSleep(6);
 
     }
 }
