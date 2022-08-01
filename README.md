@@ -7,4 +7,10 @@ Company Rover is about seacrhing dog or cat sitters at your nearest location or 
  UI Automation is the main goal of this project
 
 
- 
+ ![compressed](https://user-images.githubusercontent.com/72269385/182207476-1e6a91be-0169-45ad-bb30-c28e1f81c121.png)
+
+
+
+
+
+
