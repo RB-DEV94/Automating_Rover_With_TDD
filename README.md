@@ -12,6 +12,13 @@ Company Rover is about seacrhing dog or cat sitters at your nearest location or 
  
  Language Used : Java 
 
+Test Runner : The main control of all the tests belong to TestNG which is the starting point of the project
+
+This project can be imported as a Maven Project
+
+Running Maven clean install to download all the jars 
+
+The main execution step will be from Test NG . xml file in the test folder which has the order of how the tests will run and the BaseDriver in the main /src is the main class which has all the annotations from Test NG and tells which test to run first and what to do after each test , suite and class
 
 ROVER WEBSITE LANDING PAGE
 
