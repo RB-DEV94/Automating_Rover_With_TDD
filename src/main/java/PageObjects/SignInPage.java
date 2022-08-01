@@ -26,12 +26,12 @@ public class SignInPage
 
 
 
-    public static void doSignIn() throws InterruptedException {
+    public static void doSignIn(String User,String Password) throws InterruptedException {
        RoverLandingPage rp=new RoverLandingPage();
         WebElement signinlink=rp.getSingInLink();
         DriverCommon.click(signinlink);
-        DriverCommon.TypeText(Username,"bhagwat.rahul557@gmail.com");
-        DriverCommon.TypeText(password,"Suppu34$");
+        DriverCommon.TypeText(Username,User);
+        DriverCommon.TypeText(password,Password);
        DriverCommon.clickOnlyIfElementPresent(SignInButton);
        DriverCommon.ThreadSleep(6);
 

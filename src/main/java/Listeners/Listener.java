@@ -2,8 +2,11 @@ package Listeners;
 import java.io.File;
 import java.io.IOException;
 
+import Base.BaseDriver;
 import Utilities.ExtentManager;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -11,6 +14,7 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+import org.testng.annotations.AfterSuite;
 
 
 public class Listener  extends ExtentManager implements ITestListener
@@ -28,25 +32,37 @@ public class Listener  extends ExtentManager implements ITestListener
         }
     }
 
+
+   @AfterSuite
     public void onTestFailure(ITestResult result) {
         if (result.getStatus() == ITestResult.FAILURE) {
-            //try {
+            try {
+
             test.log(Status.FAIL,
                     MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));
-            //test.log(Status.FAIL,
-            //      MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
-            //String imgPath = action.screenShot(BaseClass.getDriver(), result.getName());
+            test.log(Status.FAIL,
+                 MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
 
-            //test.fail("ScreenShot is Attached", MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build());
+                TakesScreenshot scrShot =((TakesScreenshot)BaseDriver.driver);
+//Call getScreenshotAs method to create image file
+                File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+//Move image file to new destination
+                File imgPath=new File("/Users/rahulbhagwat/Downloads/RoverWebAutomation/src/test/ScreenShots/img.png");
+//Copy file at destination
+               FileUtils.copyFile(SrcFile, imgPath);
+            //String imgPath = .screenShot(BaseDriver.getDriver(), result.getName());
 
-            //} catch (IOException e) {
-            // TODO Auto-generated catch block
-            //  e.printStackTrace();
-            // }
-            //}
+            test.fail("Screenshot is attached");
+
+            }
+            catch (IOException e) {
+
+             e.printStackTrace();
+            }
+            }
         }
 
     }
-}
+
 
 
